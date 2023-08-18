@@ -20,6 +20,35 @@ Text-dependent voice samples refer to situations where the speaker is prompted t
 <p id="description">
   The results indicate similarities among different versions/generations of Siri and Alexa for certain speaker verification tasks. The analysis also highlights the challenges in differentiating between the same and different texts spoken by the speech assistant, which could pose a risk to speaker verification systems. Inter-pair comparison reveals variations among speech assistants, with Cortana and Google Assistant showing some similarity to Alexa's Voice. The findings suggest the need for further training and fine-tuning, as well as considering ethical and privacy implications. Overall, this research underscores the potential of transfer learning and SpeechBrain for speaker verification with text-dependent and text-independent synthetic voices.
 </p>
-<h2>Project Screenshots</h2>
-<a href="https://ibb.co/2yQzf4W"><img src="https://i.ibb.co/c1HW7nk/71.jpg" alt="71" border="0" width="300"></a><br /><a target='_blank' href='https://imgbb.com/'></a>
+
+
+![s1](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/c8120909-279e-42de-8922-7392c34c713f)
+
+![s2](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/f23ba5fe-bfcb-4504-91a0-b45aa2f970cc)
+
+![s3](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/e82071d5-91e8-47d2-9d5f-2bd3e8a399f9)
+
+![s4](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/4bd61c3f-39e1-426d-bac0-fe8ee1d487f4)
+
+![s5](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/77f4871e-7b3a-4928-a9a3-f96f25655c5e)
+
+![s6](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/07a3fbee-59b1-44a4-8c56-6fd27fa6cc49)
+
+![s7](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/8ddcd976-c3eb-40af-a390-6e80e28fa8db)
+
+![s8](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/6a81a4b4-a8a9-45e4-b9f0-ad22fff2d9c9)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
