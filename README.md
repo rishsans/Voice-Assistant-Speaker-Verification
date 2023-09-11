@@ -72,19 +72,18 @@
 
 ## Output Snippets
 
-![ss_v2](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/2874e542-f198-48ec-8da6-4189317d386e)
+<img src="https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/2874e542-f198-48ec-8da6-4189317d386e" alt="ss_v2" width="900"/>
 
-![s3](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/e82071d5-91e8-47d2-9d5f-2bd3e8a399f9)
+<img src="https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/e82071d5-91e8-47d2-9d5f-2bd3e8a399f9" alt="s3" width="900"/>
 
-![ss_v1](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/0e38457a-ebde-4509-b35e-3d76725ad930)
+<img src="https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/0e38457a-ebde-4509-b35e-3d76725ad930" alt="ss_v1" width="900"/>
 
-![s5](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/77f4871e-7b3a-4928-a9a3-f96f25655c5e)
+<img src="https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/77f4871e-7b3a-4928-a9a3-f96f25655c5e" alt="s5" width="900"/>
 
-![s6](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/07a3fbee-59b1-44a4-8c56-6fd27fa6cc49)
+<img src="https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/07a3fbee-59b1-44a4-8c56-6fd27fa6cc49" alt="s6" width="900"/>
 
-![s7](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/8ddcd976-c3eb-40af-a390-6e80e28fa8db)
+<img src="https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/8ddcd976-c3eb-40af-a390-6e80e28fa8db" alt="s7" width="900"/>
 
-![s8](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/6a81a4b4-a8a9-45e4-b9f0-ad22fff2d9c9)
 
 ## Conclusion
 - Intra-pair TDSV analysis shows similarities among all versions, leading to potential security concerns.
