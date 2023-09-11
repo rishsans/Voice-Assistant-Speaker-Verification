@@ -1,34 +1,82 @@
 
 <h1 align="center" id="title">Voice Assistant Speaker Verification</h1>
+<h3 align="center" id="title"> ECAPA-Based Speaker Verification of Virtual Assistants: A Transfer Learning Approach </h3>
 
-<p align="center"><img src="https://socialify.git.ci/rishsans/Voice-Assistant-Speaker-Verification/image?description=1&amp;descriptionEditable=Assessing%20%20the%20efficiency%20of%20transfer%20learning%20%20to%20examine%20the%20accuracy%20%26%20reliability%20of%20Speaker%0Averification%20for%20Speech%20assistants&amp;name=1&amp;owner=1&amp;pattern=Solid&amp;theme=Dark" alt="project-image"></p>
+## Abstract
+![ss_v4](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/56d9c202-d9b1-4d65-8521-79187cc5253c)
 
-<h2> Overview</h2>
-<p id="description">
-The widespread use of speech assistants like Siri, Cortana, Google Assistant, and Alexa has presented new challenges for speaker verification. While speaker recognition technology has been in use for years to identify individuals based on their distinctive voice characteristics, these virtual speech assistants are typically produced using Text-to-Speech (TTS) technology, and therefore lack the natural variations present in human voices. This project explores the use of transfer learning to adapt existing speaker recognition models to recognize synthetic voices produced by TTS technology.
+- Utilizing transfer learning with the ECAPA-TDNN model trained on the VoxCeleb2 dataset.
+- Intra-voice assistant comparisons: Achieved accuracies of 83.33% (iOS) and 66.67% (Alexa) for text-independent samples and 50% for text-dependent samples.
+- Inter-voice assistant comparisons (Alexa, Siri, Google Assistant, Cortana): 100% accuracy for text-independent, 80% for text-dependent.
+- Demonstrates the effectiveness of transfer learning and ECAPA-TDNN model for secure speaker verification across speech assistant versions.
+- Valuable insights for enhancing speaker verification in the context of speech assistants.
+
+## Introduction
+- Speaker verification utilizes speech characteristics differentiated based on pitch, formants, spectral envelope, MFCCs, and prosody characteristics.
+- "Voice prints" represent a speaker's unique vocal qualities.
+- Two types of speaker verification methods: text-dependent and text-independent.
+- Transfer learning employs pre-trained models to improve performance when labeled data is scarce.
+- The ECAPA-TDNN model from the SpeechBrain toolkit is used in this study for transfer learning on virtual assistants.
+
+## Methodology
+### Dataset
+- A custom audio dataset was created with a subset selected for analysis.
+- Organized into:
+  - **Intra-pair Comparisons:** 
+    - Siri Versions (iOS 9 vs iOS 10 vs iOS 11)
+    - Alexa Versions (3rd gen vs 4th gen vs 5th gen)
+  - **Inter-pair Comparisons:** 
+    - Alexa 
+    - Siri
+    - Google
+    - Cortana
+
+### SpeechBrain
+- Features the ECAPA-TDNN model, a state-of-the-art model for speaker recognition that uses TDNN design with MFA mechanism, Squeeze-Excitation (SE), and residual blocks.
+- Hyperparameters are detailed in a YAML format.
+- Data Loading makes use of a PyTorch dataset interface.
+- Batching includes extracting speech features like spectrograms and MFCCs.
+- `Brain_class()` simplifies the neural model training process.
+
+### Pre-trained Model: ECAPA-TDNN
+- SpeechBrain provides outputs using pre-trained models such as ECAPA-TDNN.
+1. Data preprocessing: Extract 80-dimensional filterbank features.
+2. Model initialization: 5 TDNN layers, an attention mechanism, and an MLP classifier.
+3. Hyperparameter setting: epochs, batch size, learning rate, etc.
+4. Training: Trained on the VoxCeleb2 dataset.
+5. Validation and Testing: Evaluate on a validation set.
+
+## Implementation
+<table>
+<tr>
+<td>
+- Normalize, denoise, and extract features from audio samples.
+                   
+- Adjust the ECAPA-TDNN model's initial layer for TDSV and TISV.
+  
+- Use the model to verify speaker identities and obtain similarity scores.
+  
+- Store scores and predictions in arrays.
+- Calculate accuracy, precision, F1 score, and recall for evaluation.
+</td>
+<td>
+<img src="https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/1df88772-1502-40f7-9501-5a3b40faaaf9" alt="ss_v5" width="200"/>
+</td>
+</tr>
+</table>
+
+## Result
+<p align="center">
+  <img src="https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/8e13cd7d-8e96-4cc4-ad4e-d204e746aea9" alt="ss_v3" width="700"/>
 </p>
 
-<h2>Methodology</h2>
-<p id="description">
-The project uses a pre-trained ECAPA-TDNN model from the SpeechBrain toolkit and adapts it using transfer learning to recognize synthetic voices produced by TTS technology. The model has originally been trained on human voices using the VoxCeleb2 dataset. The study assesses the accuracy and reliability of speaker verification for both text-dependent and text-independent voice samples.
+## Output Snippets
 
-Text-dependent voice samples refer to situations where the speaker is prompted to say a specific phrase or set of phrases, while text-independent voice samples refer to situations where the speaker can say any phrase or sentence. In this project, both types of samples are used to test the accuracy of the model.
-</p>
-
-
-<h2>Results</h2>
-<p id="description">
-  The results indicate similarities among different versions/generations of Siri and Alexa for certain speaker verification tasks. The analysis also highlights the challenges in differentiating between the same and different texts spoken by the speech assistant, which could pose a risk to speaker verification systems. Inter-pair comparison reveals variations among speech assistants, with Cortana and Google Assistant showing some similarity to Alexa's Voice. The findings suggest the need for further training and fine-tuning, as well as considering ethical and privacy implications. Overall, this research underscores the potential of transfer learning and SpeechBrain for speaker verification with text-dependent and text-independent synthetic voices.
-</p>
-
-
-![s1](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/c8120909-279e-42de-8922-7392c34c713f)
-
-![s2](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/f23ba5fe-bfcb-4504-91a0-b45aa2f970cc)
+![ss_v2](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/2874e542-f198-48ec-8da6-4189317d386e)
 
 ![s3](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/e82071d5-91e8-47d2-9d5f-2bd3e8a399f9)
 
-![s4](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/4bd61c3f-39e1-426d-bac0-fe8ee1d487f4)
+![ss_v1](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/0e38457a-ebde-4509-b35e-3d76725ad930)
 
 ![s5](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/77f4871e-7b3a-4928-a9a3-f96f25655c5e)
 
@@ -37,6 +85,13 @@ Text-dependent voice samples refer to situations where the speaker is prompted t
 ![s7](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/8ddcd976-c3eb-40af-a390-6e80e28fa8db)
 
 ![s8](https://github.com/rishsans/Voice-Assistant-Speaker-Verification/assets/98217912/6a81a4b4-a8a9-45e4-b9f0-ad22fff2d9c9)
+
+## Conclusion
+- Intra-pair TDSV analysis shows similarities among all versions, leading to potential security concerns.
+- Inter-pair TDSV analysis found matches between Cortana & Google Assistant and Alexa.
+- TISV has higher accuracy than TDSV due to the model's capability to differentiate different texts.
+- For better performance, additional training on a broader dataset of synthetic voices is recommended.
+- The study emphasizes the potential of transfer learning and SpeechBrain for speaker verification, also acknowledging challenges with synthetic voices.
 
 
 
